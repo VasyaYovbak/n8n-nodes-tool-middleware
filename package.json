@@ -1,0 +1,41 @@
+{
+  "name": "n8n-nodes-tool-middleware",
+  "version": "0.3.0",
+  "description": "Wrap n8n AI tool calls with trusted JavaScript middleware",
+  "license": "MIT",
+  "author": "darkstyle",
+  "keywords": [
+    "n8n-community-node-package",
+    "n8n",
+    "ai",
+    "tools",
+    "middleware"
+  ],
+  "files": [
+    "nodes"
+  ],
+  "scripts": {
+    "test": "node --test tests/*.test.cjs"
+  },
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "credentials": [],
+    "nodes": [
+      "nodes/ToolMiddleware/ToolMiddleware.node.js"
+    ]
+  },
+  "dependencies": {
+    "@langchain/core": "1.2.8",
+    "zod": "3.25.76"
+  },
+  "peerDependencies": {
+    "n8n-workflow": ">=3.2.1 <4"
+  },
+  "devDependencies": {
+    "n8n-workflow": "3.2.1",
+    "zod-to-json-schema": "3.25.2"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
